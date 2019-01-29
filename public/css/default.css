@@ -1,0 +1,153 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif; margin: 0;
+}
+
+.header
+{
+    background: #009e34; /*#1abc9c;*/
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.header h1
+{
+    font-size: 40px;
+}
+
+.main h2
+{
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: .3em;
+}
+
+.main li
+{
+    line-height: 1.5em;
+}
+
+
+.main pre
+{
+    background: #f6f8fa;
+    padding: 0px;
+    border-radius: 3px;
+    font-size: 95%;
+    line-height: 1.45;
+}
+
+.navbar
+{
+    overflow: hidden;
+    background-color: #333; /*asdasdasd*/
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side
+{
+    background-color: #f1f1f1;
+    flex: 15%;
+    padding: 20px;
+    -ms-flex: 15%; /* IE10 */
+}
+
+/* Main column */
+.main {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer
+{
+    background: #fafafa;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.footer a
+{
+    color: #005d1e;
+}
+
+.footer a:hover
+{
+    color: #2a352e;
+}
+
+.footer h4
+{
+    font-weight: normal;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}

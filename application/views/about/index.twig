@@ -1,0 +1,44 @@
+{# ----------------------------------------------- #}
+
+{% set pagename = 'About' %}
+
+{# ----------------------------------------------- #}
+
+{% extends 'template.twig' %}
+
+{% block main %}
+<h2>PROJECT</h2>
+<ul>
+  <li>ID: <strong>I</strong>mage!<strong>H</strong>OSTING</li>
+  <li>Contact: <a href="mailto:git@schepsen.eu">git@schepsen.eu</a></li>
+</ul>
+
+<h2>DESCRIPTION</h2>
+<p><strong>I</strong>mage!<strong>H</strong>OSTING is a simple php-based image hosting script</p>
+
+<h2>NOTICES</h2>
+<p>Enable mod_rewrite and add the following lines to the host configuration file (or .htaccess)</p>
+<pre>
+  <code>
+  &lt;Directory /var/www/public&gt;
+    Options -Indexes +FollowSymLinks -MultiViews
+    AllowOverride All
+    Require all granted
+
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+  &lt;/Directory&gt;
+  </code>
+</pre>
+
+<h2>CHANGELOG</h2><h3>Image!HOSTING 1.0, updated @ 2019-01-24</h3>
+
+<ul>
+  <li>Initial Release</li>
+</ul>
+
+{% endblock %}

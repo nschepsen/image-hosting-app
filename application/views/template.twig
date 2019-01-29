@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ app.title }} | {{ pagename }}</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+</head>
+<body>
+<div class="header">
+  <h1>Image!HOSTING</h1>
+  <p><b>I</b>mage!<b>H</b>OSTING is a simple php-based image hosting script</p>
+</div>
+
+<div class="navbar">
+  <a href="http://img.schepsen.eu" class="{{ pagename == 'Home' ? 'active'}}">Home</a>
+  <a href="about" class="{{ pagename == 'About' ? 'active' }}">About</a>
+  <a href="#" class="right {{ pagename == 'Sign Up' ? 'active'}}">Sign Up</a>
+  <a href="#" class="right {{ pagename == 'Sign In' ? 'active'}}">Sign In</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>STATISTICS</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">{% block main %}{% endblock %}</div>
+</div>
+
+<div class="footer">
+  <h4>Powered by <a href="" target="_blank">Image!HOSTING</a> | Copyright © 2019 Nikolaj Schepsen</h4>
+</div>
+
+</body>
+</html>
